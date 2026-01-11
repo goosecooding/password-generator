@@ -3,9 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="shortcut icon" href="images/photo_2026-01-11_21-09-10-removebg-preview (1).png" type="image/x-icon">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Password Generator</title>
 </head>
 <body>
-    
+    <nav class="navbar">
+        <div class="brand">
+            <div class="brandimage">
+                <img src="images/photo_2026-01-11_21-09-10-removebg-preview (1).png" alt="">
+            </div>
+            <div class="brandtext">
+                <h1><a href="index.html">Password Generator</a></h1>
+            </div>
+        </div>
+        <div class="navlinks">
+            <a href="index.html" class="selected">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </div>
+    </nav>
+    <div class="mother">
+        <div class="savedPassword">
+
+        </div>
+        <div class="devider"></div>
+        <div class="motherGenerator">
+        <div class="Generator">
+            <div class="boxGenerator">
+                <div class="header">
+                    <h1>Generator</h1>
+                </div>
+                <div class="content">
+                    <div class="password">
+                        <input type="text" id="result" value="password" readonly>
+                        <button>Save</button>
+                    </div>
+                    <div class="passwordLenght">
+                        <label for="password-length">password length:</label>
+                        <input type="range" min="8" max="23" value="8" name="password-length" id="password-length"
+                        oninput="this.nextElementSibling.value = this.value">
+                        <output>8</output>
+                    </div>
+                        <div class="options">
+                            <label for="Lower-case">
+                                <input type="checkbox" id="Lower-case">
+                                <span>Lower case</span>
+                            </label>
+                            <label for="Upper-case">
+                                <input type="checkbox" id="Upper-case">
+                                <span>Upper case</span>
+                            </label>
+                            <label for="Numbers">
+                                <input type="checkbox" id="Numbers">
+                                <span>Numbers</span>
+                            </label>
+                            <label for="symbols">
+                                <input type="checkbox" id="symbols">
+                                <span>symbols (!@#$%^&*)</span>
+                            </label>
+                        </div>
+                        <button id="Generatorbtn">Generate</button>
+                </div>
+            </div>
+        </div>
+        </div>
+
+    </div>
 </body>
 </html>

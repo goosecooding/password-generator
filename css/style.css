@@ -1,0 +1,127 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --background-color: #f2f2f2;
+    --boxes: #fff;
+    --borders: #000;
+    --box-shadows:#000;
+    --font-primary: hsl(0, 0%, 0%);
+    --font-secondary: hsl(0, 0%, 10%);
+    --boxes: #FFCC00;
+}
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 90px;
+    padding-inline: 15px;
+    border-bottom: 3px solid var(--borders);
+}
+.brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3rem;
+}
+.brandimage img {
+    width: 50px;
+}
+.brandtext h1 a {
+    text-decoration: none;
+    color: var(--font-primary);
+    font-family: "baloo";
+    font-weight: 700;
+}
+.navlinks {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+.navlinks a {
+    text-decoration: none;
+    color: var(--font-secondary);
+    font-size: clamp(10px, 3vw, 25px);
+    font-family: "baloo";
+    font-weight: 600;
+    padding: 10px 15px;
+    border: 3px solid var(--borders);
+    background: hsl(0, 0%, 70%);
+    box-shadow: 6px 6px 0 var(--box-shadows);
+    transition: all 50ms ease-in-out;
+}
+.selected {
+    color: var(--font-primary) !important;
+}
+.navlinks a:hover {
+    color: var(--font-primary);
+}
+.navlinks a:active {
+    box-shadow: 2px 2px 0 var(--box-shadows);
+    transform: translateY(2px);
+}
+.mother {
+    height: calc(100vh - 90px);
+    display: grid;
+    grid-template-columns: 1fr auto 1.5fr;
+    gap: 5px;
+}
+.devider {
+    height: 100%;
+    width: 6px;
+    background: var(--borders);
+}
+.motherGenerator {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Generator {
+    background: var(--boxes);
+    width: min(100%, 600px);
+    height: 400px;
+    text-align: center;
+    border: 3px solid var(--borders);
+    box-shadow: 6px 6px 0 var(--box-shadows);
+}
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-inline: 15px;
+    border-bottom: 2px solid var(--borders);
+    height: 50px;
+}
+.header h1 {
+    font-family: "baloo";
+    font-weight: 800;
+}
+.content {
+    height: calc(400px - 50px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 30px;
+    gap: 10px;
+}
+.password input {
+    border: 3px solid var(--borders);
+    outline: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-family: "baloo";
+    box-shadow: 2px 2px 0 var(--box-shadows);
+}
+.password button {
+    cursor: pointer;
+    padding: 15px 20px;
+    border: 3px solid var(--borders);
+    box-shadow: 2px 2px 0 var(--box-shadows);
+}
