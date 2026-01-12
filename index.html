@@ -31,7 +31,6 @@
         <div class="devider"></div>
         <div class="motherGenerator">
         <div class="Generator">
-            <div class="boxGenerator">
                 <div class="header">
                     <h1>Generator</h1>
                 </div>
@@ -40,8 +39,8 @@
                         <input type="text" id="result" value="password" readonly>
                         <button>Save</button>
                     </div>
+                        <label for="password-length" class="PasswordLengthGenerate">password length:</label>
                     <div class="passwordLenght">
-                        <label for="password-length">password length:</label>
                         <input type="range" min="8" max="23" value="8" name="password-length" id="password-length"
                         oninput="this.nextElementSibling.value = this.value">
                         <output>8</output>
@@ -60,16 +59,18 @@
                                 <span>Numbers</span>
                             </label>
                             <label for="symbols">
-                                <input type="checkbox" id="symbols">
+                                <input type="checkbox" id="Symbols">
                                 <span>symbols (!@#$%^&*)</span>
                             </label>
                         </div>
                         <button id="Generatorbtn">Generate</button>
                 </div>
-            </div>
         </div>
         </div>
 
     </div>
+
+
+    <script src="js/main.js"></script>
 </body>
 </html>

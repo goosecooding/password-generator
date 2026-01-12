@@ -34,6 +34,7 @@
 .brandtext h1 a {
     text-decoration: none;
     color: var(--font-primary);
+    font-size: clamp(5px, 4vw, 35px);
     font-family: "baloo";
     font-weight: 700;
 }
@@ -84,8 +85,8 @@
 }
 .Generator {
     background: var(--boxes);
-    width: min(100%, 600px);
-    height: 400px;
+    width: clamp(100px, 80%, 900px);
+    height: 600px;
     text-align: center;
     border: 3px solid var(--borders);
     box-shadow: 6px 6px 0 var(--box-shadows);
@@ -103,25 +104,126 @@
     font-weight: 800;
 }
 .content {
-    height: calc(400px - 50px);
+    width: 100%;
+    height: calc(100% - 50px);
+    padding-top: 30px;
     display: flex;
     flex-direction: column;
+    gap: 7px;
+}
+.password {
+    display: flex;
+    margin-bottom: 10px;
     align-items: center;
-    justify-content: flex-start;
-    padding-top: 30px;
-    gap: 10px;
+    gap: 5px;
+    justify-content: center;
 }
 .password input {
+    width: 70%;
     border: 3px solid var(--borders);
     outline: none;
     padding: 10px 15px;
-    font-size: 16px;
+    font-size: 23px;
     font-family: "baloo";
     box-shadow: 2px 2px 0 var(--box-shadows);
 }
 .password button {
     cursor: pointer;
-    padding: 15px 20px;
+    padding: 18px 25px;
     border: 3px solid var(--borders);
+    box-shadow: 2px 2px 0 var(--box-shadows);
+    font-family: "baloo";
+    font-weight: 600;
+    background: #14532D;
+    color: #FFFFFF;
+}
+.passwordLenght {
+    width: 100%;
+    font-family: "baloo";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-weight: 600;
+}
+.PasswordLengthGenerate {
+    font-family: "baloo";
+    font-size: clamp(15px, 3vw, 25px);
+    font-weight: 600;
+}
+#password-length {
+    width: 90%;
+}
+.options {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    font-family: "baloo";
+    font-size: clamp(10px, 2vw, 19px);
+}
+.options label {
+    justify-self: center;
+    width: 90%;
+    padding: 10px;
+    background-color: #14532D;
+    color: #fff;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    box-shadow: 4px 4px 0 #0c311b;
+}
+.options input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #FFCC00;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+    background: transparent;
+    transition: all 0.2s ease;
+}
+.options input[type="checkbox"]:checked {
+    background-color: #FFCC00;
+    border-color: #FFCC00;
+}
+.options input[type="checkbox"]:checked::after {
+    content: "✔";
+    position: absolute;
+    color: #14532D;
+    font-size: 13px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -55%);
+    font-weight: bold;
+}
+.options label:hover input[type="checkbox"] {
+    transform: scale(1.1);
+}
+.options input[type="checkbox"]:focus-visible {
+    outline: 2px solid #FFCC00;
+    outline-offset: 2px;
+}
+#Generatorbtn {
+    width: 20%;
+    height: 50px;
+    margin: 40px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #196437;
+    color: #f2f2f2;
+    font-family: "baloo";
+    cursor: pointer;
+    font-size: clamp(10px, 3vw, 20px);
+    box-shadow: 6px 6px 0 var(--box-shadows);
+}
+#Generatorbtn:active {
+    transform: translateY(3px);
     box-shadow: 2px 2px 0 var(--box-shadows);
 }
