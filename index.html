@@ -23,11 +23,27 @@
             <a href="#">About</a>
             <a href="#">Contact</a>
         </div>
+
+        <button class="menu-btn" id="menuBtn">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
     </nav>
     <div class="mother">
-        <div class="savedPassword">
-
+    <div class="mother-saved">
+    <div class="SavedBox">
+        <div class="header">
+            <h1>Saved</h1>
         </div>
+
+        <div class="savedContent" id="savedContent">
+            <!-- saved passwords will appear here -->
+        </div>
+    </div>
+    </div>
+
+
         <div class="devider"></div>
         <div class="motherGenerator">
         <div class="Generator">
@@ -37,7 +53,7 @@
                 <div class="content">
                     <div class="password">
                         <input type="text" id="result" value="password" readonly>
-                        <button>Save</button>
+                        <button id="saveBtn">Save</button>
                     </div>
                         <label for="password-length" class="PasswordLengthGenerate">password length:</label>
                     <div class="passwordLenght">

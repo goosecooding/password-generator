@@ -66,6 +66,36 @@
     box-shadow: 2px 2px 0 var(--box-shadows);
     transform: translateY(2px);
 }
+.menu-btn {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.menu-btn span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: #000;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+.navlinks.active {
+    display: flex;
+    transition: all 300ms ease-in-out;
+}
+.menu-btn.active span:nth-child(2) {
+    opacity: 0;
+}
+.menu-btn.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+.menu-btn.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
 .mother {
     height: calc(100vh - 90px);
     display: grid;
@@ -119,7 +149,7 @@
     justify-content: center;
 }
 .password input {
-    width: 70%;
+    width: clamp(40%, 60%, 70%);
     border: 3px solid var(--borders);
     outline: none;
     padding: 10px 15px;
@@ -129,7 +159,7 @@
 }
 .password button {
     cursor: pointer;
-    padding: 18px 25px;
+    padding: clamp(10px, 3vw, 18px) clamp(20px, 4vw, 25px);
     border: 3px solid var(--borders);
     box-shadow: 2px 2px 0 var(--box-shadows);
     font-family: "baloo";
@@ -226,4 +256,125 @@
 #Generatorbtn:active {
     transform: translateY(3px);
     box-shadow: 2px 2px 0 var(--box-shadows);
+}
+.mother-saved {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.SavedBox {
+    background: var(--boxes);
+    width: clamp(100px, 80%, 600px);
+    height: 600px;
+    border: 3px solid var(--borders);
+    box-shadow: 6px 6px 0 var(--box-shadows);
+    display: flex;
+    flex-direction: column;
+}
+
+.savedContent {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: auto;
+}
+.savedItem {
+    width: 100%;
+    background: #FFFBEB;
+    border: 3px solid var(--borders);
+    box-shadow: 4px 4px 0 var(--box-shadows);
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-family: "baloo";
+}
+
+/* Password text */
+.savedItem span {
+    background: #fff;
+    border: 2px solid var(--borders);
+    padding: 8px 10px;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 1px;
+    box-shadow: inset 2px 2px 0 #ddd;
+    word-break: break-all;
+}
+.savedItem .actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+/* Buttons */
+.savedItem button {
+    padding: 6px 14px;
+    font-family: "baloo";
+    font-weight: 700;
+    border: 3px solid var(--borders);
+    box-shadow: 3px 3px 0 var(--box-shadows);
+    cursor: pointer;
+    transition: transform 0.1s ease;
+}
+
+/* Copy button */
+.savedItem .copyBtn {
+    background: #14532D;
+    color: #fff;
+}
+
+/* Delete button */
+.savedItem button:last-child {
+    background: #7f1d1d;
+    color: #fff;
+}
+
+/* Click effect */
+.savedItem button:active {
+    transform: translateY(2px);
+    box-shadow: 1px 1px 0 var(--box-shadows);
+}
+@media (max-width: 900px) {
+        .navlinks {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem !important;
+            position: absolute;
+            height: 100vh;
+            width: 250px;
+            top: 0;
+            right: 0;
+            padding: 5rem 1.5rem;
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            z-index: 1000;
+            transition: all 300ms ease-in-out;
+        }
+        .navlinks a {
+            padding: 20px 60px;
+        }
+        .menu-btn {
+            display: block;
+            z-index: 1000;
+        }
+            .mother {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        height: auto;
+    }
+
+    .devider {
+        width: 100%;
+        height: 4px;
+    }
+
+    .motherGenerator,
+    .mother-saved {
+        padding: 20px 0;
+    }
 }
